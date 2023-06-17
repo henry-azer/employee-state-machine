@@ -1,5 +1,5 @@
 # Employee State Machine
-Spring boot restful employee state machine. implement spring state machine example. In addition too Lombok, Mapstruct, Liquibase and Postgresql db.
+Spring boot restful employee state machine. implement spring state machine example in clean architecture. In addition too Lombok, Mapstruct, Liquibase, and Postgresql db.
 
 ## 📊 Repository stats
 [![Contributors][contributors-shield]][contributors-url]
