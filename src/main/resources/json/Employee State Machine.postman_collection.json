@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "4948f3f5-0c4e-45e6-b0f7-a1234b882f64",
+		"name": "Employee State Machine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get employee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/employee-service/api/v1/employee/1",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"employee-service",
+						"api",
+						"v1",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"henry azer\"\n}"
+				},
+				"url": {
+					"raw": "{{local}}/employee-service/api/v1/employee",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"employee-service",
+						"api",
+						"v1",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apply event",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/employee-service/api/v1/employee/1/event/BEGIN_CHECK",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"employee-service",
+						"api",
+						"v1",
+						"employee",
+						"1",
+						"event",
+						"BEGIN_CHECK"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://127.0.0.1:8010",
+			"type": "default"
+		}
+	]
+}
